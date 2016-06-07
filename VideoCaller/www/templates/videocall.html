@@ -1,0 +1,30 @@
+<div ng-controller="CallController as vm">
+  <ion-header-bar class="bar-stable">
+    <h1 class="title">Conectado como: <span><i class="icon icon-user">{{username}}</i></span></h1>
+  </ion-header-bar>
+  <ion-content class="padding has-header">
+
+    <div class="card" ng-show="call.open">
+      <video id="contact-video" autoplay></video>
+    </div>
+
+    <div class="list" ng-show="!call.open">
+      <span class="input-label">Usuario</span>
+      <label class="item item-input">
+        <input type="text" placeholder="Dígite el usuario al que desea llamar" ng-model="vm.contact">
+      </label>
+    </div>
+
+    <button class="button icon-align-center button-positive" ng-click="startCall()" ng-show="!call.open">
+      <img src="img/ic_call_black_48px.svg">
+    </button>
+
+    <button class="button icon-align-center" ng-click="endCall()" ng-show="call.open">
+      <img src="img/ic_call_end_black_48px.svg">
+    </button>
+
+  </ion-content>
+  <ion-footer-bar>
+    <h5 class="text-center"><strong>Desarrollado por:</strong> Juan Galvis - Luis Restrepo</h5>
+  </ion-footer-bar>
+</div>

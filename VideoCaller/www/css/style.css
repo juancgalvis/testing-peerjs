@@ -1,0 +1,11 @@
+/* Empty. Add your own CSS if you like */
+.button.button-positive {
+  border-color: #00aa00;
+  background-color: #009900;
+  color: #fff;
+}
+
+.button.button-positive.active, .button.button-positive.activated {
+  border-color: #00bb00;
+  background-color: #00aa00;
+}
